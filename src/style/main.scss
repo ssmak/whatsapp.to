@@ -1,0 +1,9 @@
+$bgColor: #fff;
+$fontSize: 12pt;
+
+html, body {
+  font-size: $fontSize;
+}
+body {
+  background: $bgColor;
+}
