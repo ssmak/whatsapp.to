@@ -16,7 +16,7 @@ module.exports = () => {
     },
     devServer: {
       contentBase: './',
-      publicPath: '/dist/'
+      publicPath: '/docs/'
     },
     module: {
       rules: [
@@ -61,7 +61,8 @@ module.exports = () => {
           // Check if production build
           if(env === 'production') {
             // Remove development code
-            return originalHTML.replace(/<script src="docs\/bundle.js"><\/script>/, '');;
+            originalHTML = originalHTML.replace(/<script src="docs\/bundle.js"><\/script>/, "");
+            originalHTML = originalHTML.replace(/<base href="\/">/, "<base href='/docs'>");
           }
 
           return originalHTML;
