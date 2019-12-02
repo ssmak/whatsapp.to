@@ -1,4 +1,4 @@
-$bgColor: #fff;
+$bgColor: #fafafa;
 $fontSize: 12pt;
 
 html, body {
@@ -6,4 +6,5 @@ html, body {
 }
 body {
   background: $bgColor;
+  padding: 32px;
 }

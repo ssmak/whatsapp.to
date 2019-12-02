@@ -4,9 +4,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   devtool: 'inline-source-map',
-  entry: './src/index.js',
+  entry: './src/App.js',
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, './doc'),
     publicPath: '/',
     filename: 'bundle.js'
   },
@@ -45,18 +45,35 @@ module.exports = {
           'postcss-loader',
         ],
       },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {},
+          },
+        ],
+      },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       hash: true,
       template: path.resolve(__dirname, './index.html'),
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true
+      }
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css',
       ignoreOrder: false,
-    })
+    }),
   ],
   stats: {
     children: false,
