@@ -10,13 +10,13 @@ module.exports = () => {
     devtool: 'inline-source-map',
     entry: './src/App.js',
     output: {
-      path: path.resolve(__dirname, './docs'),
+      path: path.resolve(__dirname, './dist'),
       publicPath: '/',
       filename: 'bundle.js'
     },
     devServer: {
       contentBase: './',
-      publicPath: '/docs/'
+      publicPath: '/dist/'
     },
     module: {
       rules: [
@@ -49,6 +49,7 @@ module.exports = () => {
       new HtmlWebpackPlugin({
         hash: true,
         template: path.resolve(__dirname, `./index.html`),
+        base: env === 'production' ? 'https://ssmak.github.io/whatsapp.to/' : '/',
         minify: {
           collapseWhitespace: true,
           removeComments: true,
@@ -56,16 +57,6 @@ module.exports = () => {
           removeScriptTypeAttributes: true,
           removeStyleLinkTypeAttributes: true,
           useShortDoctype: true
-        },
-        preProcessing: (originalHTML) => {
-          // Check if production build
-          if(env === 'production') {
-            // Remove development code
-            originalHTML = originalHTML.replace(/<script src="docs\/bundle.js"><\/script>/, "");
-            originalHTML = originalHTML.replace(/<base href="\/">/, "<base href='/docs'>");
-          }
-
-          return originalHTML;
         },
       }),
       new HtmlWebpackProcessingPlugin(),
