@@ -1,22 +1,21 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackProcessingPlugin = require('html-webpack-processing-plugin');
-const yargs = require('yargs').argv;
+// const yargs = require('yargs').argv;
 
 module.exports = () => {
-  const env = yargs.mode ? yargs.mode : 'development';
 
   return {
     devtool: 'inline-source-map',
     entry: './src/App.js',
     output: {
-      path: path.resolve(__dirname, './dist'),
+      path: __dirname + '/dist',
       publicPath: '/',
       filename: 'bundle.js'
     },
     devServer: {
       contentBase: './',
-      publicPath: '/dist/'
+      publicPath: '/dist/',
     },
     module: {
       rules: [
@@ -45,22 +44,7 @@ module.exports = () => {
         },
       ],
     },
-    plugins: [
-      new HtmlWebpackPlugin({
-        hash: true,
-        template: path.resolve(__dirname, `./index.html`),
-        base: env === 'production' ? 'https://ssmak.github.io/whatsapp.to/' : '/',
-        minify: {
-          collapseWhitespace: true,
-          removeComments: true,
-          removeRedundantAttributes: true,
-          removeScriptTypeAttributes: true,
-          removeStyleLinkTypeAttributes: true,
-          useShortDoctype: true
-        },
-      }),
-      new HtmlWebpackProcessingPlugin(),
-    ],
+    plugins: [],
     stats: {
       children: false,
     }
