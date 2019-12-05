@@ -1,4 +1,4 @@
-package idv.onemanband.whatsappto;
+package idv.ssmak.whatsappto;
 
 import android.app.Application;
 import android.content.Context;

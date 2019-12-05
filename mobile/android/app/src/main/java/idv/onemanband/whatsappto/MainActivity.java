@@ -1,4 +1,4 @@
-package idv.onemanband.whatsappto;
+package idv.ssmak.whatsappto;
 
 import com.facebook.react.ReactActivity;
 

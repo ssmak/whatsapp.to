@@ -128,7 +128,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "idv.onemanband.whatsappto"
+        applicationId "idv.ssmak.whatsappto"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
