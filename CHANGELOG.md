@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.0] - 2019-12-05
+### Added
+- Add support `Enter` key.
+
 ## [0.0.1] - 2019-12-02
 ### Added
 - First release version.
