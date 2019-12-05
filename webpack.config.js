@@ -7,7 +7,7 @@ module.exports = () => {
 
   return {
     devtool: 'inline-source-map',
-    entry: './src/App.js',
+    entry: './src/App.tsx',
     output: {
       path: __dirname + '/dist',
       publicPath: '/',
@@ -20,7 +20,7 @@ module.exports = () => {
     module: {
       rules: [
         {
-          test: /\.(js|jsx)$/,
+          test: /\.(js|jsx|ts|tsx)$/,
           exclude: /node_modules/,
           use: ['babel-loader', /*"eslint-loader"*/],
         },

@@ -51,7 +51,7 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <StatusBar hidden />
+        {/* <StatusBar hidden /> */}
         <SafeAreaView style={{ flex: 1, flexDirection: 'column', backgroundColor: '#f00', width: '100%', height: '100%' }}>
           <WebView
             ref={(ref) => { this.webview = ref; }}
