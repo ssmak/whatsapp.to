@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 2019-12-08
+### Added
+- Android & iOS build.
+
+### Changed
+- Remove toggle function for the about section.
+
 ## [0.1.0] - 2019-12-05
 ### Added
 - Add support `Enter` key.

@@ -16,11 +16,11 @@ const styles = {
     textAlign: 'justify',
   },
   remark: {
-    fontSize: '0.7rem',
+    fontSize: '0.8rem',
     textAlign: 'justify',
   },
   copyright: {
-    fontSize: '0.5rem',
+    fontSize: '0.7rem',
     textAlign: 'center',
   },
 };
@@ -71,10 +71,10 @@ class App extends React.Component {
           <button className="btn btn-primary mt-2" onClick={this.handleCall}>Call</button>
         </div>
         <div className="mt-4">
-          <div className="d-flex justify-content-center" data-toggle="collapse" href="#app-description" role="button" aria-expanded="false" aria-controls="collapseExample">
+          {/* <div className="d-flex justify-content-center">
             <div style={{ cursor: 'pointer' }}>About&nbsp;<span className="text-primary font-weight-light" style={{ textDecoration: 'underline' }}>Whatsapp.to</span></div>
-          </div>
-          <div className="collapse" id="app-description">
+          </div> */}
+          <div id="app-description">
             <div style={styles.description}>
               <span className="text-primary">Whatsapp.to</span> feature allows you to begin a chat with someone without having their phone number saved in your phone's address book. As long as you know this person’s phone number, you can place the phone number here that will allow you to start a chat with them. By clicking the 'Call' button, a chat with the person automatically opens. This feature works on both your phone and WhatsApp Web.
           </div>

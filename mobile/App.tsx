@@ -52,7 +52,7 @@ class App extends React.Component {
     return (
       <>
         {/* <StatusBar hidden /> */}
-        <SafeAreaView style={{ flex: 1, flexDirection: 'column', backgroundColor: '#f00', width: '100%', height: '100%' }}>
+        <SafeAreaView style={{ flex: 1, flexDirection: 'column', backgroundColor: '#fff', width: '100%', height: '100%' }}>
           <WebView
             ref={(ref) => { this.webview = ref; }}
             source={{ uri: 'https://ssmak.github.io/whatsapp.to' }}
