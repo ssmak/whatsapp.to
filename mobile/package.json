@@ -6,12 +6,16 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
+    "clean:android": "cd android && ./gradlew clean && cd ../",
+    "clean:ios": "cd ios && xcodebuild clean && cd ../",
+    "bundle:js": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/",
+    "build:prod": "cd android && ./gradlew assembleRelease && cd ../",
     "test": "jest"
   },
   "dependencies": {
     "react": "16.9.0",
     "react-native": "0.61.4",
-    "react-native-webview": "^7.5.2"
+    "react-native-webview": "^11.23.1"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
@@ -21,9 +25,8 @@
     "@types/react-native": "^0.60.22",
     "@types/react-test-renderer": "16.9.0",
     "babel-jest": "^24.9.0",
-    "ios-deploy": "^1.10.0",
     "jest": "^24.9.0",
-    "metro-react-native-babel-preset": "^0.56.0",
+    "metro-react-native-babel-preset": "^0.66.2",
     "react-test-renderer": "16.9.0",
     "typescript": "^3.6.3"
   },

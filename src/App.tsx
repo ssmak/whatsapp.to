@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./styles/main.scss";
 import logo from './images/whatsapp_logo.jpg';
+ 
 
 const styles = {
   title: {
@@ -77,14 +78,16 @@ class App extends React.Component {
           <div id="app-description">
             <div style={styles.description}>
               <span className="text-primary">Whatsapp.to</span> feature allows you to begin a chat with someone without having their phone number saved in your phone's address book. As long as you know this person’s phone number, you can place the phone number here that will allow you to start a chat with them. By clicking the 'Call' button, a chat with the person automatically opens. This feature works on both your phone and WhatsApp Web.
-          </div>
+            </div>
             <div className="mt-2" style={styles.remark}>
-              *A full phone number in international format. Omit any zeroes, brackets or dashes when adding the phone number in international format.  Please keep in mind that this phone number must have an active account on WhatsApp.
-          </div>
+                *A full phone number in international format. Omit any zeroes, brackets or dashes when adding the phone number in international format.  Please keep in mind that this phone number must have an active account on WhatsApp.
+            </div>
+            <div className="mt-4 text-danger" style={{...styles.remark, fontStyle: 'italic'}}>
+                Disclaimer: WhatsApp logo which used in this website is a trademark of Facebook Inc. This website is not affiliated with Facebook Inc. in any way.
+            </div>
           </div>
           <div className="mt-4" style={styles.copyright}>
-            Project from <a className="font-weight-bold" href="https://github.com" target="_blank">Github</a>.<br />
-            Source from <a href="https://github.com/ssmak/whatsapp.to" target="_blank">https://github.com/ssmak/whatsapp.to</a> by <a className="text-success" href="https://github.com/ssmak" target="_blank">@ssmak</a>.
+            &copy; Project developed by <span className="font-weight-bold">SM TECHLAB</span>.<br />
           </div>
         </div>
       </div>
